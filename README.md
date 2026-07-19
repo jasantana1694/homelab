@@ -12,10 +12,21 @@ A self-hosted homelab built on Proxmox VE for learning and practicing real-world
 
 ### Active Directory
 - Deployed AD DS and promoted server to domain controller
-- Created departmental Organizational Units (IT, HR, Finance)
-- Configured security groups and user accounts
-- Wrote Group Policy Objects to enforce password policies and restrict Control Panel access
-- Set up shared folders with group-based access control
+- Designed enterprise OU structure (Users, Computers, Groups, Service Accounts)
+- Created departmental OUs for IT, HR, and Finance with sub-OUs for computers
+- Configured security groups following AGDLP best practice
+- Implemented group nesting for scalable permission management
+- Delegated control to helpdesk staff following principle of least privilege
+- Configured Group Policy Objects including:
+  - Domain wide password and account lockout policies
+  - Automatic network drive mapping for IT users
+  - Control Panel restrictions for HR users
+  - Desktop wallpaper enforcement for Finance users
+  - Legal warning banner for IT computers
+- Configured DNS with A records and CNAME records for internal name resolution
+- Deployed DHCP with custom scopes and reservations
+- Practiced real world scenarios including employee onboarding, offboarding, password resets, account unlocks, and new computer setup
+- Used PowerShell to automate bulk user creation
 
 ### Web Server
 - Deployed Nginx on Ubuntu Server 24.04
